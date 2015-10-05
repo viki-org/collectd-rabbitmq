@@ -6,6 +6,7 @@ import urllib2
 import urllib
 import json
 import re
+import socket
 
 RABBIT_API_URL = "http://{host}:{port}/api/"
 
@@ -29,6 +30,7 @@ PLUGIN_CONFIG = {
     'realm': 'RabbitMQ Management'
 }
 
+hostname = socket.gethostname()
 
 def configure(config_values):
     '''
@@ -100,7 +102,7 @@ def dispatch_values(values, host, plugin, plugin_instance, metric_type,
 
     metric = collectd.Values()
     if host:
-        metric.host = host
+        metric.host = hostname
     metric.plugin = plugin
     if plugin_instance:
         metric.plugin_instance = plugin_instance
