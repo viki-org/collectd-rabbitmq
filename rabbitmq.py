@@ -17,10 +17,12 @@ MESSAGE_STATS = ['ack', 'publish', 'publish_in', 'publish_out', 'confirm',
                  'deliver', 'deliver_noack', 'get', 'get_noack', 'deliver_get',
                  'redeliver', 'return']
 MESSAGE_DETAIL = ['avg', 'avg_rate', 'rate', 'sample']
-NODE_STATS = ['disk_free', 'disk_free_limit', 'fd_total',
-              'fd_used', 'mem_limit', 'mem_used',
-              'proc_total', 'proc_used', 'processors', 'run_queue',
-              'sockets_total', 'sockets_used']
+
+NODE_STATS = []
+#NODE_STATS = ['disk_free', 'disk_free_limit', 'fd_total',
+#              'fd_used', 'mem_limit', 'mem_used',
+#              'proc_total', 'proc_used', 'processors', 'run_queue',
+#              'sockets_total', 'sockets_used']
 
 PLUGIN_CONFIG = {
     'username': 'guest',
